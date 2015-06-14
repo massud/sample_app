@@ -4,13 +4,13 @@ feature 'Static Pages' do
 
   describe 'Home page' do
     it 'should have_title("Ruby on Rails Tutorial Sample App | Home")' do
-      visit '/static_pages/home'
+      visit '/'
       expect(page).to have_selector('title', :text => "Ruby on Rails Tutorial Sample App | Home")
     end
   
 
     it "should have the h1 'Sample App'" do
-      visit '/static_pages/home'
+      visit '/'
       expect(page).to have_selector('h1', :text => 'Sample App')
     end
   end

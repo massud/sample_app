@@ -3,9 +3,10 @@ require 'rails_helper'
 feature 'Static Pages' do
 
   describe 'Home page' do
+
     it 'should have_title("Ruby on Rails Tutorial Sample App | Home")' do
       visit '/'
-      expect(page).to have_selector('title', :text => "Ruby on Rails Tutorial Sample App | Home")
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App")
     end
   
 
@@ -16,6 +17,7 @@ feature 'Static Pages' do
   end
 
   describe "Help page" do
+
     it "should have content 'Help'" do 
       visit '/static_pages/help' 
       expect(page).to have_content 'Help'
@@ -28,6 +30,7 @@ feature 'Static Pages' do
   end
 
   describe 'About page' do
+
     it "should have content 'About'" do
       visit '/static_pages/about'
       expect(page).to have_content 'About'
@@ -40,6 +43,7 @@ feature 'Static Pages' do
   end
 
   describe 'Contact page' do
+
     it "should have content 'Contact'" do
       visit '/static_pages/contact'
       expect(page).to have_content 'Contact'

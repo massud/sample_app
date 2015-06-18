@@ -61,9 +61,9 @@ feature 'Static Pages' do
     before { visit signup_path }
 
 
-    it "should have content 'This will be a signup page for new users'" do
-      expect(page).to have_content 'This will be a signup page for new users'
-    end
+    # it "should have content 'This will be a signup page for new users'" do
+    #   expect(page).to have_content 'This will be a signup page for new users'
+    # end
 
     it 'should have_title("Sign up")' do
       expect(page).to have_title("Sign up")

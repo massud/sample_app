@@ -84,7 +84,7 @@ describe User do
     #   it { should_not be_valid }
     # end
 
-    describe "when password has a minimum length" do
+    describe "when password has less than minimum length" do
       before { @user.password = @user.password_confirmation = "a" * 5 }
 
       it { should_not be_valid }
